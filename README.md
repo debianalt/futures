@@ -16,8 +16,8 @@ Data and code for the research project *Sociotechnical futures and material real
 ├── docs/
 │   └── search_protocol.md     # Systematic search documentation (queries, databases, deduplication)
 ├── R/
-│   ├── 01_study_selection.R   # Scoring pipeline → shortlist (§2 of the article)
-│   ├── 02_field_mapping.R     # Epistemic geography, disciplines, trends (§3)
+│   ├── 01_study_selection.R   # Scoring pipeline → shortlist
+│   ├── 02_field_mapping.R     # Epistemic geography, disciplines, trends
 │   └── 03_figure.R            # Fig. 1: competing sociotechnical futures
 ├── sql/
 │   ├── schema.sql             # PostgreSQL schema (alternative to CSV)
@@ -56,19 +56,6 @@ Rscript R/03_figure.R
 
 - **Literature database**: Built from the [OpenAlex](https://openalex.org/) API via structured queries and citation snowballing from 9 seed papers. See `docs/search_protocol.md` for the full search strategy.
 - **Figure 1**: Schematic diagram (no external data required).
-
-## Citation
-
-If you use these materials, please cite the article:
-
-```bibtex
-@article{gomez2026sociotechnical,
-  author  = {G{\'o}mez, Raimundo El{\'i}as},
-  title   = {Sociotechnical futures and material realities: technology,
-             dematerialisation, and the politics of evidence},
-  year    = {2026}
-}
-```
 
 ## License
 
