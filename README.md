@@ -1,8 +1,6 @@
 # Sociotechnical Futures and Material Realities — Replication Materials
 
-Supplementary data and code for:
-
-> Gómez, R. E. (2026). Sociotechnical futures and material realities: technology, dematerialisation, and the politics of evidence. *Sociology Compass*.
+Data and code for the research project *Sociotechnical futures and material realities: technology, dematerialisation, and the politics of evidence*.
 
 ## Repository structure
 
@@ -68,7 +66,6 @@ If you use these materials, please cite the article:
   author  = {G{\'o}mez, Raimundo El{\'i}as},
   title   = {Sociotechnical futures and material realities: technology,
              dematerialisation, and the politics of evidence},
-  journal = {Sociology Compass},
   year    = {2026}
 }
 ```
