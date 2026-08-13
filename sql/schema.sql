@@ -141,10 +141,8 @@ CREATE INDEX idx_topics_domain      ON work_topics(domain_name);
 CREATE INDEX idx_kw_work            ON work_keywords(openalex_id);
 CREATE INDEX idx_kw_keyword         ON work_keywords(keyword);
 
-CREATE INDEX idx_cite_citing        ON citation_edges(citing_id);
 CREATE INDEX idx_cite_cited         ON citation_edges(cited_id);
 
-CREATE INDEX idx_prov_work          ON search_provenance(openalex_id);
 CREATE INDEX idx_prov_query         ON search_provenance(query_label);
 
 CREATE INDEX idx_coding_pillar      ON coding(abstract_pillar);

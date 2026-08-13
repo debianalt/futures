@@ -9,8 +9,8 @@
 # loop on the left represents the "expectations trap."
 #
 # Output:
-#   figures/fig01_competing_futures.png  (300 DPI)
-#   figures/fig01_competing_futures.pdf  (vector)
+#   figures/fig02_competing_futures.png  (300 DPI)
+#   figures/fig02_competing_futures.pdf  (vector)
 #
 # Usage: Rscript R/03_figure.R   (from github/ root)
 # ──────────────────────────────────────────────────────────────────────
@@ -227,8 +227,8 @@ p <- ggplot() +
   )
 
 # ── Save ──────────────────────────────────────────────────────────────
-png_path <- file.path(fig_dir, "fig01_competing_futures.png")
-pdf_path <- file.path(fig_dir, "fig01_competing_futures.pdf")
+png_path <- file.path(fig_dir, "fig02_competing_futures.png")
+pdf_path <- file.path(fig_dir, "fig02_competing_futures.pdf")
 
 ggsave(png_path, p, width = 10, height = 7.5, dpi = 300, bg = "white")
 ggsave(pdf_path, p, width = 10, height = 7.5, bg = "white")
