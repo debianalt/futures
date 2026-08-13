@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18967219.svg)](https://doi.org/10.5281/zenodo.18967219)
 
-Data and code for the research project *Sociotechnical futures and material realities: technology, dematerialisation, and the politics of evidence* (manuscript under review at *Sociology Compass*).
+Data and code for the research project *Sociotechnical futures and material realities: technology, dematerialisation, and the politics of evidence*.
 
 ## Repository structure
 
