@@ -195,21 +195,31 @@ Seeds:                                       9
 Total records:                           5,079
 After deduplication (by OpenAlex ID):    4,465
                     ↓
-Title/abstract screening:                4,465
-Composite relevance ranking; top-ranked
-candidates assessed in detail:             150
+Ranked by composite relevance score:     4,465
+Top-ranked candidates read in full and
+assessed against the criteria:             150
                     ↓
 Included from database screening:           10
+  (8 top-ranked; 2 already known from the
+  literature, ranked 284 and 447 of 4,465)
 Additional records identified through
 citation searching of key reviews
 (not in the OpenAlex snapshot):             10
                     ↓
 FINAL CORPUS:                               20
   – technology × material outcomes:         17
-    (of which counter-evidence/mixed:        4)
   – displacement-specific:                   3
     (plus 1 dual-coverage study)
 ```
+
+No record outside the 150 top-ranked was screened by hand. The two database
+studies below the ranking threshold (Steinberger et al., 2013, rank 284;
+Knight and Rosa, 2011, rank 447; score at rank 150 = 0.400) were already
+known from the literature and were read and assessed against the same
+criteria. Citation searching started from the reference lists of Haberl et
+al. (2020) and Wiedenhofer et al. (2020) and continued through the reviews
+they led to, Parrique et al. (2019) and Vadén et al. (2020); it was directed
+at studies reporting positive, conditional, or mixed decoupling findings.
 
 Theoretical and interpretive sources (ecological modernisation, sociology of
 expectations) were identified through Q3 and the snowball but selected
@@ -231,7 +241,7 @@ All searches were executed programmatically via the OpenAlex API, which indexes 
 - **Structured queries** (Q1, Q1b, Q2, Q3, Q3b, S1–S6): 12 queries returning 2,655 records
 - **Citation snowball** (forward + backward from 9 seed papers): 2,415 records
 - **Deduplication**: by OpenAlex ID, yielding 4,465 unique works
-- **Scoring and ranking**: composite score based on citation count, pillar coverage, internal citations, and seed proximity
+- **Scoring and ranking**: composite score = 0.25 × log-normalised citation count + 0.30 × pillar keyword match (pillar dictionaries matched in title/abstract, capped at three, scaled 0–1) + 0.20 × log-normalised within-corpus citations + 0.15 × seed proximity (0.5 for a seed, 0.3 for a work citing or cited by a seed) + 0.10 × core-journal bonus (0.15); the 150 top-ranked candidates were read in full
 - Script: `openalex_search.py`; provenance log: `db/search_provenance.csv`
 
 ---

@@ -15,7 +15,7 @@ Data and code for the research project *Sociotechnical futures and material real
 │   ├── work_topics.csv         # OpenAlex topic classifications
 │   ├── search_provenance.csv   # Which query found each work
 │   ├── shortlist.csv           # Top 150 ranked candidates (output of 01_study_selection.R)
-│   ├── coding.csv              # Screening and coding of all 4,465 records
+│   ├── coding.csv              # Assessment stage and coding of all 4,465 records
 │   └── additional_records.csv  # Corpus studies identified via citation search
 ├── docs/
 │   └── search_protocol.md      # Search documentation (queries, funnel, criteria)

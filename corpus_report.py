@@ -54,9 +54,8 @@ def main():
     print(f"Citation snowball (9 seeds):            {N_SNOWBALL:>6,}")
     print(f"Seeds:                                  {N_SEEDS:>6,}")
     print(f"Total records:                          {N_TOTAL:>6,}")
-    print(f"After deduplication (title/abstract"
-          f" screened):                             {N_DEDUP:>6,}")
-    print(f"Top-ranked candidates assessed:         {N_SHORTLIST:>6,}")
+    print(f"After deduplication (ranked by score):  {N_DEDUP:>6,}")
+    print(f"Top-ranked candidates read in full:     {N_SHORTLIST:>6,}")
     print(f"  (marked candidate_screen, excluded):  {len(screened):>6,}")
     print(f"Included from database:                 {len(db_included):>6,}")
     print(f"Additional records (citation search):   {len(add_included):>6,}")
@@ -72,6 +71,9 @@ def main():
     print("Per pillar:")
     for k, v in pillar.most_common():
         print(f"  {k:32s} {v:>3}")
+    tech_total = pillar.get("tech_material", 0) + pillar.get("affluence_confound", 0)
+    print(f"  {'technology-material total':32s} {tech_total:>3}"
+          "  (affluence_confound is a sub-label of the technology-material pillar)")
     dual = [r for r in corpus if r.get("notes", "").startswith("dual pillar:")]
     print(f"  (dual-coverage studies also informing"
           f" displacement: {len(dual)})")
