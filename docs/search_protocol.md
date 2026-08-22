@@ -198,25 +198,39 @@ After deduplication (by OpenAlex ID):    4,465
 Ranked by composite relevance score:     4,465
 Top-ranked candidates read in full and
 assessed against the criteria:             150
+  included:                                  8
+  framework sources:                         6
+Below the ranking threshold:             4,315
+  targeted screen (four rules):            407
+  excluded at title and abstract:          339
+  assessed for eligibility:                 68
+    (31 full text; 37 abstract only)          
+  included (25 full text; 23 abstract):     48
+  not eligible / not assessable:        9 / 11
+  known item outside the rules:              1
                     ↓
-Included from database screening:           10
-  (8 top-ranked; 2 already known from the
-  literature, ranked 284 and 447 of 4,465)
+Included from the database:                 57
 Additional records identified through
 citation searching of key reviews
 (not in the OpenAlex snapshot):             10
                     ↓
-FINAL CORPUS:                               20
-  – technology × material outcomes:         17
-  – displacement-specific:                   3
-    (plus 1 dual-coverage study)
+FINAL CORPUS:                               67
+  – technology × material outcomes:         60
+  – displacement-specific:                   7
+    (plus 2 dual-coverage studies)
 ```
 
-No record outside the 150 top-ranked was screened by hand. The two database
-studies below the ranking threshold (Steinberger et al., 2013, rank 284;
-Knight and Rosa, 2011, rank 447; score at rank 150 = 0.400) were already
-known from the literature and were read and assessed against the same
-criteria. Citation searching started from the reference lists of Haberl et
+The 4,315 records below the threshold were screened a second time by rule
+(`targeted_screen.py`): R1 two or more pillar dictionaries matched; R2 a
+material-outcome term with a cross-national cue; R3 no abstract and a
+material-outcome term in the title; R4 a displacement term with a
+cross-national cue. 407 records were selected and screened at title and
+abstract (`data/targeted_screen_2026-08-21.csv`); 68 were assessed for
+eligibility, 31 on the full text and 37 on the abstract
+(`data/fulltext_extraction_2026-08.csv`); 48 were included. Steinberger et
+al. (2013, rank 284) was selected by R2 and had been identified earlier from
+the literature; Knight and Rosa (2011, rank 447) matched no rule and was
+assessed outside them. Citation searching started from the reference lists of Haberl et
 al. (2020) and Wiedenhofer et al. (2020) and continued through the reviews
 they led to, Parrique et al. (2019) and Vadén et al. (2020); it was directed
 at studies reporting positive, conditional, or mixed decoupling findings.

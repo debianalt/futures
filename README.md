@@ -16,6 +16,9 @@ Data and code for the research project *Sociotechnical futures and material real
 │   ├── search_provenance.csv   # Which query found each work
 │   ├── shortlist.csv           # Top 150 ranked candidates (output of 01_study_selection.R)
 │   ├── coding.csv              # Assessment stage and coding of all 4,465 records
+│   ├── targeted_screen_selection.csv   # The 407 below-threshold records selected by the four rules
+│   ├── targeted_screen_2026-08-21.csv  # Title/abstract screening decisions for the 407
+│   ├── fulltext_extraction_2026-08.csv # Eligibility assessment and coding of the 67 candidates
 │   └── additional_records.csv  # Corpus studies identified via citation search
 ├── docs/
 │   └── search_protocol.md      # Search documentation (queries, funnel, criteria)
@@ -29,6 +32,8 @@ Data and code for the research project *Sociotechnical futures and material real
 ├── figures/
 │   ├── fig01_review_funnel.{jpg,png,pdf}      # Fig. 1: identification and inclusion flow
 │   └── fig02_competing_futures.{jpg,png,pdf}  # Fig. 2: competing sociotechnical futures
+├── select_studies.py           # Composite relevance ranking (Python)
+├── targeted_screen.py          # Reproduces the targeted second screen (four rules, 407 records)
 ├── corpus_report.py            # Funnel and corpus counts (single source of truth)
 ├── LICENSE                     # MIT
 └── README.md
