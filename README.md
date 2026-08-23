@@ -32,6 +32,7 @@ Data and code for the research project *Sociotechnical futures and material real
 ├── figures/
 │   ├── fig01_review_funnel.{jpg,png,pdf}      # Fig. 1: identification and inclusion flow
 │   └── fig02_competing_futures.{jpg,png,pdf}  # Fig. 2: competing sociotechnical futures
+├── openalex_search.py          # Identification stage: OpenAlex queries and citation snowball
 ├── select_studies.py           # Composite relevance ranking (Python)
 ├── targeted_screen.py          # Reproduces the targeted second screen (four rules, 407 records)
 ├── corpus_report.py            # Funnel and corpus counts (single source of truth)
